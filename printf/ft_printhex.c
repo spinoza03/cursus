@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 12:24:49 by ilallali          #+#    #+#             */
-/*   Updated: 2024/12/06 19:16:37 by ilallali         ###   ########.fr       */
+/*   Updated: 2024/12/15 23:02:51 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,14 @@ int	ft_puthex(unsigned long nb, char format)
 	if (nb > 15)
 		count += ft_puthex(nb / 16, format);
 	if (format == 'x')
-		count += ft_putchar(lhex[nb % 16]);
+	{
+		count += 1;
+		ft_putchar(lhex[nb % 16]);
+	}
 	else
-		count += ft_putchar(uhex[nb % 16]);
+	{
+		count += 1;
+		ft_putchar(uhex[nb % 16]);
+	}
 	return (count);
 }

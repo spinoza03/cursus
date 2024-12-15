@@ -6,7 +6,7 @@
 /*   By: ilallali <ilallali@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/06 12:29:27 by ilallali          #+#    #+#             */
-/*   Updated: 2024/12/06 19:45:26 by ilallali         ###   ########.fr       */
+/*   Updated: 2024/12/15 17:40:23 by ilallali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,8 @@ int	ft_putunsigned(unsigned int nb)
 	if (nb > 9)
 	{
 		count += ft_putunsigned(nb / 10);
-		count += ft_putchar((nb % 10) + '0');
 	}
-	else
-	{
-		count += ft_putchar(nb + '0');
-	}
+	count += 1;
+	ft_putchar((nb % 10) + '0');
 	return (count);
 }
